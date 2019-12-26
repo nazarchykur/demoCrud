@@ -12,7 +12,8 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id", unique = true, nullable = false)
+//    @Basic(fetch = FetchType.EAGER)
     private int id;
 
     @Column(name = "first_name")
